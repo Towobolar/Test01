@@ -9,8 +9,7 @@ on:
       - main
 
 jobs:
-  build:
-    name: test
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
