@@ -23,11 +23,24 @@
     }
 
     # An example resource that does nothing.
-    resource "null_resource" "example" {
-      triggers = {
-        value = "A example resource that does nothing!"
-      }
-    }
+   # resource "null_resource" "example" {
+   #   triggers = {
+   #     value = "A example resource that does nothing!"
+  #    }
+   # }
+/***************************
+*     create vpc          *
+***************************/
+
+resource "aws_vpc" "three-tier-vpc" {
+  cidr_block       = "10.0.0.0/16"
+  instance_tenancy = "default"
+
+  tags = {
+    terraform = "true"
+    Name      = "three tier vpc"
+  }
+}
 #
 #
 # 2. Generate a Terraform Cloud user API token and store it as a GitHub secret (e.g. TF_API_TOKEN) on this repository.
