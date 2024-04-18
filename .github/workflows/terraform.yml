@@ -32,8 +32,8 @@ jobs:
         cli_config_credentials_token: ${{ secrets.tfc_team_token }}
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
-    - name: Terraform Init
-      run: terraform init
+    # - name: Terraform Init
+    #  run: terraform init
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
