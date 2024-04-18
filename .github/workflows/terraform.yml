@@ -3,7 +3,7 @@ name: 'Terraform'
 
 on:
   push:
-    branches: [ "feature/test_vpc" ]
+    branches: [ "main" ]
   pull_request:
 
 permissions:
